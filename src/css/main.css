@@ -1,0 +1,79 @@
+:root {
+  --img-width: 1000px;
+  --img-height: 500px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.carousel {
+  width: var(--img-width);
+  height: var(--img-height);
+  position: relative;
+}
+
+.carousel-images img,
+.carousel-images,
+.carousel-container {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  object-fit: cover;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 400ms ease-in-out;
+}
+
+.carousel-container {
+  overflow: hidden;
+  box-shadow: 5px 5px 10px #e2e2e2, -5px -5px 10px #f2f2f2;
+}
+
+.button {
+  background-color: rgb(43, 43, 255);
+  padding: 8px 12px;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "consolas";
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+  border: 2px solid transparent;
+}
+
+.button.left {
+  top: 50%;
+  left: 100px;
+}
+
+.button.right {
+  top: 50%;
+  right: 100px;
+}
+
+.button:active {
+  border-color: black;
+}
